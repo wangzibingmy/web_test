@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>英华逸游</title>
+		<style>
+			body{
+				font-family: "微软雅黑";
+			}
+			#denglu{
+				width:100%;
+				height:45px;
+				background-color: #515151;
+				font-family: "微软雅黑";
+				position: fixed;
+				float: left;
+				margin-top: -10px;
+			}
+			#denglu img{
+				margin-left: 1000px;
+				margin-top: 10px;
+				float: left;
+			}
+			#zi{
+				float: left;
+				margin-top: 12px;
+				color: white;
+			}
+			a{
+				text-decoration: none;
+			}
+			#zi a{
+				color: white;
+				text-decoration: none;
+			}
+			.a1{
+				margin-left: 10px;
+				margin-bottom: 10px;
+			}
+			#zhong{
+				width: 100%;
+				height: 80px;
+				float: left;
+				margin-top: 45px;
+			}
+			#xuanfu{
+				width: 100%;
+				height: 80px;
+				float: left;
+				position: fixed;
+				font-size: 1.1em;
+				border-bottom:1px solid lightgray;
+				box-shadow: 0px 5px 0px #EEEED1;
+				background-color: white;
+				margin-top: -10px;
+			}
+			#xuanfu img{
+				margin-top: 4px;
+				margin-left: 50px;
+				float: left;
+			}
+			#xuanfu a:hover{
+				color: #FF4500;
+			}
+			#xuanfu a{
+				color: #000000;
+			}
+			.shouye{				
+				margin-left: 400px;
+				margin-top: 28px;
+				float: left;				
+			}
+			.mudidi{
+				margin-left: 25px;
+				margin-top: 28px;
+				float: left;
+			}
+			.mudidi a{
+				margin-left: 25px;
+			}
+			#zuo{
+				width: 1120px;
+				height: auto;
+				float: left;
+				margin-left: 115px;
+			}
+			#mianbao{
+				width:1120px;
+				height: 20px;
+				float: left;
+				margin-top: 35px;
+
+			}
+			#mianbao a{
+				color: black;
+			}
+			#jiage{
+				width: 1120px;
+				height: 35px;
+				float: left;
+				background-color: #F5F5F5;
+				border: 1px solid #EEEED1;
+				margin-top: 20px;
+			}
+			.jiagezi{
+				height: 20px;
+				width: 41.47px;
+				float: left;
+				margin-left: 20px;
+				margin-top: 7.5px;
+			}
+			.jiantou{
+				width: 13px;
+				height: 18px;
+				float: left;
+				margin-top: 3px;
+				
+			}
+			.jiantou1{
+				width: 12px;
+				height: 8px;
+				float: left;
+				margin-top: 0px;
+			}
+			.jiantou2{
+				margin-top: 2px;
+				width: 12px;
+				height: 8px;
+				float: left;
+			}
+			.sitiao{
+				width: 160px;
+				height: 20px;
+				float: left;
+				margin-left: 800px;
+				margin-top: 7.5px;
+			}
+			.siyi{
+				width: 50px;
+				height: 20px;
+				float: left;
+				margin-top: 6px;
+			}
+			#jiage a{
+				color: #FF4500;
+			}
+			#zhong1{
+				width: 1120px;
+				height: 330px;
+				float: left;
+			}
+			.tu1{
+				width: 459px;
+				height: 310px;
+				float: left;
+				margin-top: 20px;
+			}
+			.wen1{
+				margin-left: 20px;
+				margin-top: 20px;
+				float: left;
+				width: 641px;
+				height: 310px;
+			}
+			.huizi{
+				font-size: 0.95em;
+				color: #999999;
+				float: left;
+			}
+			.wenan{
+				color: #FF4500;
+				font-size: 0.95em;
+				float: left;
+				margin-left: 10px;
+			}
+			.uull{
+				list-style-type: decimal;
+				font-size: 0.95em;
+				color: #999999;
+				list-style-position: outside;
+				margin-left: -15px;
+				width: 250px;
+				height: 100px;
+			}
+			#qian{
+				width: 240px;
+				height: 35px;
+				float: right;				
+				margin-top: -60px;
+				margin-left: 150px;
+				color: #FF4500;
+			}
+			.button1{
+				background-color: #FF4500;
+				color: white;
+				text-align: center;
+				border-radius: 10px;
+				width: 110px;
+				height:40px;
+				float: right;
+				margin-top: -50px;
+			}
+			.hhrr{
+				height: 1px;
+				width: 1120px;
+				float: left;
+				margin-top: 15px;
+			}
+			#you{
+				width: 47px;
+				height: 385px;
+				float: right;
+				right: 0px;
+				position: fixed;
+				margin-top: 125px;
+			}
+			#di{
+				background-color: black;
+				width: 100%;
+				height: 370px;
+				float: left;
+				margin-top: 60px;
+				color: white;
+			}
+			#dishang{
+				width: 100%;
+				height: 250px;
+				float: left;
+				border-bottom: 1px solid gray;
+			}
+			#shangzuo{
+				height: 250px;
+				width: 820px;
+				float: left;
+			}
+			#guanyv{
+				width: 120px;
+				height: 150px;
+				float: left;
+				margin-top: 30px;
+				margin-left: 60px;
+			}
+			.guanyv_ul{
+				list-style: none;
+				list-style-position: outside;
+				padding: 0px;
+				font-size: 0.8em;
+			}
+			#wangzhan{
+				height: 160px;
+				width: 120px;
+				float: left;
+				margin-left: 20px;	
+				margin-top: 30px;
+			}
+			#guanzhu{
+				width: 300px;
+				height: 180px;
+				float: left;
+				margin-left: 10px;	
+				margin-top: 30px;
+			}
+			#sina{
+				width: 70px;
+				height: 75px;
+				float: left;
+				font-size: 0.8em;
+			}
+			#weixin{
+				width: 70px;
+				height: 75px;
+				font-size: 0.8em;
+				float: left;
+				margin-left: 20px;
+			}
+			#erweima{
+				width: 133px;
+				height: 133px;
+				float: left;
+			}
+			#shangyou{
+				width: 400px;
+				height: 180px;
+				float: left;
+			}
+			#youup{
+				height: 75px;
+				width: 400px;
+				float: left;
+				margin-top: 30px;
+			}
+			#zixun{
+				width: 120px;
+				height: 60px;
+				float: left;
+				margin-top: 5px;
+			}
+			#rexian{
+				width: 120px;
+				height: 55px;
+				float: left;
+				margin-top: 5px;
+			}
+			#youdown{
+				width: 350px;
+				height: 90px;
+				float: left;
+				margin-left: 60px;
+				font-size: 0.8em;
+			}
+			#phonetu{
+			    width: 68px;
+			    height: 67px;
+			    float: left;
+			}
+			#dixia{
+				height: 99px;
+				width: 100%;
+				float: left;
+			}
+			#hezuo{
+				width: 70px;
+				height: 30px;
+				float: left;
+				margin-top: 20px;
+				margin-left: 60px;
+			}
+			#xiecheng{
+				width: 111px;
+				height: 50px;
+				float: left;
+				margin-left: 10px;
+				margin-top: 20px;
+			}
+			#susu{
+				width: 73px;
+				height: 50px;
+				float: left;
+				margin-left: 10px;
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="denglu">			
+			<img src="kefu.png" alt="kefu"/>
+			<div id="zi">
+				<a href="#" class="a1">400-808-8682</a>
+				<a class="a1" href="#">请登录</a>
+				&nbsp;|
+				<a class="a1" href="#">注册</a>
+			</div>	
+		</div>
+		<div id="zhong">
+			<div id="xuanfu">
+				<img src="logo.png" alt="logo"/>
+				<div class="shouye">
+					<a href="#">首页</a>
+				</div>
+				<div class="mudidi">
+					<a href="#">目的地</a>
+					<a href="#">亲子游学</a>
+					<a href="#">酒店预订</a>
+					<a href="#">车辆接送</a>
+					<a href="#">签证代办</a>
+					<a href="#">精彩瞬间</a>
+				</div>
+			</div>
+		</div>
+		<div id="zuo">
+			<div id="mianbao">
+				<a href="#">首页</a>
+				>
+				<a href="#">目的地</a>
+				>
+				<a href="#">出境游</a>
+			</div>
+			<div id="jiage">
+				<div class="jiagezi">
+					价格
+				</div>
+				<div class="jiantou">
+					<div class="jiantou1">
+						<img src="shang.png" />
+					</div>
+					<div class="jiantou2">
+						<img src="xia.png" />
+					</div>					
+				</div>
+				<div class="sitiao">
+					共<a href="#">4</a>条出境游信息
+				</div>
+				<div class="siyi">
+					<a href="#">4</a>/1
+				</div>
+			</div>
+			<div id="zhong1">
+				<div class="tu1">
+					<img src="che.png"/>
+				</div>
+				<div class="wen1">
+					<h3>LH德法瑞意+金色列车+少女峰+THEMALL10晚12天(瑞深)</h3>	
+					<font class="huizi">Banyan Tree Bangkok</font><font class="wenan">(文案后台可编辑)</font><br /><br />
+					<font class="huizi">夏令营是TA感受社会人生的一条小小路径，无论什么样的体验，什么样的体会都是一次经历，
+									而这些经历，就是父母能带给这些幼小生命的，一笔珍贵，不会失落的财富
+					</font><br /><br /><br />
+					<font class="huizi">特工特训营5大收获：</font><br/>
+					<ul class="uull">
+						<li>培养独立能力与沟通能力</li>
+						<li>双语环境，提升英语口语交流水平</li>
+						<li>团队合作，提升综合素质</li>
+						<li>克服心理障碍，提升自信心</li>
+						<li>开阔视野，增长阅历激发天赋</li>
+					</ul>
+					<div id="qian">
+						<h3 class="ba">￥8350/人起</h3>
+                    	<button class="button1">查看详情</button>
+					</div>
+				</div>
+			</div>
+			<div class="hhrr">
+				<hr />
+			</div>
+			<div id="zhong1">
+				<div class="tu1">
+					<img src="fang.png"/>
+				</div>
+				<div class="wen1">
+					<h3>旅游标题(以下文案仅为实例)</h3>	
+					<font class="huizi">Banyan Tree Bangkok</font><font class="wenan">(文案后台可编辑)</font><br /><br />
+					<font class="huizi">夏令营是TA感受社会人生的一条小小路径，无论什么样的体验，什么样的体会都是一次经历，
+									而这些经历，就是父母能带给这些幼小生命的，一笔珍贵，不会失落的财富
+					</font><br /><br /><br />
+					<font class="huizi">特工特训营5大收获：</font><br/>
+					<ul class="uull">
+						<li>培养独立能力与沟通能力</li>
+						<li>双语环境，提升英语口语交流水平</li>
+						<li>团队合作，提升综合素质</li>
+						<li>克服心理障碍，提升自信心</li>
+						<li>开阔视野，增长阅历激发天赋</li>
+					</ul>
+					<div id="qian">
+						<h3 class="ba">￥8350/人起</h3>
+                    	<button class="button1">查看详情</button>
+					</div>
+				</div>
+			</div>
+			<div class="hhrr">
+				<hr />
+			</div>
+			<div id="zhong1">
+				<div class="tu1">
+					<img src="dao.png"/>
+				</div>
+				<div class="wen1">
+					<h3>旅游标题(以下文案仅为实例)</h3>	
+					<font class="huizi">Banyan Tree Bangkok</font><font class="wenan">(文案后台可编辑)</font><br /><br />
+					<font class="huizi">夏令营是TA感受社会人生的一条小小路径，无论什么样的体验，什么样的体会都是一次经历，
+									而这些经历，就是父母能带给这些幼小生命的，一笔珍贵，不会失落的财富
+					</font><br /><br /><br />
+					<font class="huizi">特工特训营5大收获：</font><br/>
+					<ul class="uull">
+						<li>培养独立能力与沟通能力</li>
+						<li>双语环境，提升英语口语交流水平</li>
+						<li>团队合作，提升综合素质</li>
+						<li>克服心理障碍，提升自信心</li>
+						<li>开阔视野，增长阅历激发天赋</li>
+					</ul>
+					<div id="qian">
+						<h3 class="ba">￥8350/人起</h3>
+                    	<button class="button1">查看详情</button>
+					</div>
+				</div>
+			</div>
+			<div class="hhrr">
+				<hr />
+			</div>
+			<div id="zhong1">
+				<div class="tu1">
+					<img src="jiaotang.png"/>
+				</div>
+				<div class="wen1">
+					<h3>旅游标题(以下文案仅为实例)</h3>	
+					<font class="huizi">Banyan Tree Bangkok</font><font class="wenan">(文案后台可编辑)</font><br /><br />
+					<font class="huizi">夏令营是TA感受社会人生的一条小小路径，无论什么样的体验，什么样的体会都是一次经历，
+									而这些经历，就是父母能带给这些幼小生命的，一笔珍贵，不会失落的财富
+					</font><br /><br /><br />
+					<font class="huizi">特工特训营5大收获：</font><br/>
+					<ul class="uull">
+						<li>培养独立能力与沟通能力</li>
+						<li>双语环境，提升英语口语交流水平</li>
+						<li>团队合作，提升综合素质</li>
+						<li>克服心理障碍，提升自信心</li>
+						<li>开阔视野，增长阅历激发天赋</li>
+					</ul>
+					<div id="qian">
+						<h3 class="ba">￥8350/人起</h3>
+                    	<button class="button1">查看详情</button>
+					</div>
+				</div>
+			</div>
+			<div class="hhrr">
+				<hr />
+			</div>
+		</div>
+		<div id="you">
+			<img src="qq.png"/>
+			<img src="ke.png"/>
+			<img src="wei.png"/>
+			<img src="xin.png"/>
+			<img src="ren.png"/>
+			<img src="vip.png"/>
+		</div>
+		<div id="di">
+			<div id="dishang">
+				<div id="shangzuo">
+					<div id="guanyv">
+						<h4>关于我们</h4>
+						<ul class="guanyv_ul">
+						 	<li>公司简介</li>
+							<li>团队介绍</li>
+							<li>帮助文档</li>
+						</ul>						
+					</div>
+					<div id="wangzhan">
+						<h4>网站须知</h4>
+						<ul class="guanyv_ul">
+						 	<li>预订须知</li>
+							<li>网站条约</li>
+						</ul>						
+					</div>
+					<div id="wangzhan">
+						<h4>支付方式</h4>
+						<ul class="guanyv_ul">
+						 	<li>支付宝</li>
+							<li>微信</li>
+							<li>上门刷卡</li>
+							<li>银行转账</li>
+						</ul>						
+					</div>
+					<div id="guanzhu">
+						<h4>关注英华逸游</h4>
+						<div id="sina">
+							<img src="sina.png"/>
+							新浪微博
+						</div>
+						<div id="weixin">
+							<img src="weixin.png"/>
+							官方微信
+						</div>
+						<div id="erweima">
+							<img src="erweima.png"/>
+						</div>
+					</div>
+				</div>
+				<div id="shangyou">
+					<div id="youup">
+						<div id="phonetu">
+							<img src="phone.png"/>
+						</div>					
+						<div id="zixun">
+							<font style="font-size: 1.2em;">咨询热线</font>
+							<font style="font-size: 0.8em;">customer hotline</font>
+						</div>
+						<div id="rexian">
+							400-808-8682<br />
+							0512-86862063
+						</div>						
+					</div>
+					<div id="youdown">
+						邮箱：cs@yhyiyou.com<br/>
+						地址：苏州市姑苏区三元二村16号兴元楼二楼东
+					</div>
+				</div>
+			</div>
+			<div id="dixia">
+				<div id="hezuo">
+					<font>合作伙伴</font>
+				</div>
+				<div id="xiecheng">
+					<img src="xiecheng.png"/>
+					<font style="margin-left: 36.3px; font-size: 0.8em;">携程网</font>
+				</div>
+				<div id="xiecheng">
+					<img src="feizhu.png"/>
+					<font style="margin-left: 29.9px; font-size: 0.8em;">阿里飞猪</font>
+				</div>
+				<div id="xiecheng">
+					<img src="qunar.png"/>
+					<font style="margin-left: 36.3px; font-size: 0.8em;">去哪儿</font>
+				</div>
+				<div id="susu">
+					<img src="suzhoutiantang.png"/>
+					<font style="font-size: 0.8em;">苏州旅游局</font>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

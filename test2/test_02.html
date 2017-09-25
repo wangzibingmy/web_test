@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+		<script type="text/javascript" src="rem.js"></script>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.shang{
+				width: 7.5rem;
+				height: 3.58rem;			
+			}
+			.bg{
+				width: 7.5rem;
+				height: 3.58rem;
+				float: left;
+				position: absolute;							
+			}
+			.chen{
+				width: 2rem;
+				height: 1.98rem;
+				float: left;
+				margin-top: 0.8rem;
+				margin-left: 2.75rem;
+				position: absolute;				
+			}
+			.name{
+				font-size: 0.35rem;
+				margin-top: 2.92rem;
+				margin-left: 2.88rem;
+				position: absolute;
+			}
+			.banner{
+				width: 7.5rem;
+				height: 1rem;
+				float: left;
+				font-size: 0.25rem;
+				background-color: #eeeeee;
+			}
+			.dingdan{				
+				margin-left: 0.32rem;
+				margin-top: 0.37rem;
+				float: left;
+			}
+			.lr{
+				width: 2rem;
+				height: 1rem;
+				margin-right: 0.32rem;
+				float: right;
+			}
+			.look{
+				color: #a4a4a4;
+				float: left;
+				margin-top: 0.37rem;
+			}
+			.right{
+				width: 0.1rem;
+				height: 0.18rem;
+				float: left;
+				margin-left:0.16rem ;
+				margin-top: 0.45rem;
+			}
+			.main{
+				width: 7.5rem;
+				height: 7.8rem;
+				background-color: #eeeeee;
+				float: left;
+				font-size: 0.23rem;
+			}
+			.one{
+				width: 7.5rem;
+				height: 1.68rem;
+				float: left;
+			}
+			.fabu{
+				width: 2.48rem;
+				height: 1.68rem;
+				float: left;
+				background-color: #ffdb2c;
+			}
+			.fabu img{
+				width: 0.54rem;
+				height: 0.5rem;
+				margin-top: 0.43rem;
+				margin-left: 0.99rem;
+				float: left;
+			}
+			.shoucang img{
+				width: 0.52rem;
+				height: 0.5rem;
+				margin-top: 0.43rem;
+				margin-left: 0.99rem;
+				float: left;
+			}
+			.myfb{
+				color: #fff;
+				margin-left: 0.78rem;
+				margin-bottom:0.43rem;
+			}
+			.shoucang{
+				width: 2.48rem;
+				height: 1.68rem;
+				float: left;
+				margin-left: 0.03rem;
+				background-color: #fff;
+			}
+			.mysc{
+				margin-left: 0.78rem;
+				margin-bottom:0.43rem ;
+			}
+			.guanzhu{
+				width: 2.48rem;
+				height: 1.68rem;
+				float: left;
+				margin-left: 0.03rem;
+				background-color: #fff;
+			}
+			.guanzhu img{
+				width: 0.56rem;
+				height: 0.42rem;
+				margin-top: 0.49rem;
+				margin-left: 1.02rem;
+				float: left;
+			}
+			.two{
+				margin-top: 0.12rem;
+				width: 7.5rem;
+				height: 1.9rem;
+				float: left;
+			}
+			.car{
+				width: 3.7rem;
+				height: 1.9rem;
+				float: left;
+				background-color: #fff;
+			}
+			.car img{
+				width: 0.57rem;
+				height: 0.5rem;
+				float: left;
+				margin-left: 1.5rem;
+				margin-top: 0.55rem;
+			}
+			.mycar{
+				margin-left: 1.55rem;
+				margin-bottom: 0.5rem;
+			}
+			.local{
+				margin-left: 0.09rem;
+				width: 3.7rem;
+				height: 1.9rem;
+				float: left;
+				background-color: #fff;
+			}
+			.local img{
+				width: 0.5rem;
+				height: 0.5rem;
+				float: left;
+				margin-left: 1.62rem;
+				margin-top: 0.56rem;
+			}
+			.mylocal{
+				margin-left: 1.4rem;
+				margin-bottom: 0.5rem;
+			}
+			.three{
+				margin-top: 0.08rem;
+				width: 7.5rem;
+				height: 1.9rem;
+				float: left;
+			}
+			.money{
+				width: 3.7rem;
+				height: 1.9rem;
+				float: left;
+				background-color: #fff;
+			}
+			.money img{
+				width: 0.54rem;
+				height: 0.41rem;
+				float: left;
+				margin-left: 1.59rem;
+				margin-top: 0.58rem;
+			}
+			.mym{
+				margin-left: 1.51rem;
+				margin-bottom: 0.57rem;
+			}
+			.myxx{
+				margin-left: 1.4rem;
+				margin-bottom: 0.59rem;
+			}
+			.wheel{
+				margin-left: 0.09rem;
+				width: 3.7rem;
+				height: 1.9rem;
+				float: left;
+				background-color: #fff;
+			}
+			.wheel img{
+				width: 0.5rem;
+				height: 0.48rem;
+				float: left;
+				margin-left: 1.6rem;
+				margin-top: 0.54rem;
+			}
+			.mywheel{
+				margin-left: 1.6rem;
+				margin-bottom: 0.55rem;
+			}
+			.di{
+				width: 7.5rem;
+				height: 1rem;
+				float: left;
+				border-top: 1px solid #949494;
+				font-size: 0.2rem;
+				color: #737373;
+				position: fixed;
+				bottom: 0;
+				margin-top: 8.8rem;
+				background-color: #fff;
+			}
+			.shouye{
+				width: 0.42rem;
+				height: 0.98rem;
+				margin-left: 0.57rem;
+				float: left;
+			}
+			.shouye img{
+				width: 0.39rem;
+				height: 0.39rem;
+				margin-top: 0.17rem;
+			}
+			.myshou{
+				margin-top: 0.06rem;
+			}
+			.shangcheng{
+				width: 0.42rem;
+				height: 0.98rem;
+				margin-left: 1.06rem;
+				float: left;
+			}
+			.shangcheng img{
+				width: 0.32rem;
+				height: 0.38rem;
+				margin-top: 0.18rem;
+			}
+			.jia{
+				width: 0.82rem;
+				height: 0.98rem;
+				float: left;
+				margin-left: 0.87rem;
+			}
+			.jia img{
+				width: 0.82rem;
+				height: 0.82rem;
+				margin-top: 0.09rem;
+			}
+			.linggan{
+				width: 0.52rem;
+				height: 0.98rem;
+				float: left;
+				margin-left: 0.78rem;
+				text-align: center;
+			}
+			.linggan img{
+				width: 0.52rem;
+				height: 0.38rem;
+				margin-top: 0.17rem;
+			}
+			.wode{
+				width: 0.42rem;
+				height: 0.98rem;
+				float: left;
+				margin-left: 1rem;
+			}
+			.wode img{
+				width: 0.34rem;
+				height: 0.38rem;
+				margin-top: 0.17rem;
+			}
+			.mymy{
+				color: #ffea96;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="shang">
+			<img src="img/bg.png" class="bg">
+			<img class="chen" src="img/chen.png"/>
+			<font class="name">土方桔桔桔</font>
+		</div>
+		<div class="banner">
+			<font class="dingdan">我的订单</font>
+			<div class="lr">
+				<font class="look">查看全部订单</font>
+				<img class="right" src="img/right.png"/>
+			</div>			
+		</div>
+		<div class="main">
+			<div class="one">
+				<div class="fabu">
+					<img src="img/aaa.png"/>
+					<font class="myfb">我的发布</font>
+				</div>
+				<div class="shoucang">
+					<img src="img/star.png"/>
+					<font class="mysc">我的收藏</font>
+				</div>
+				<div class="guanzhu">
+					<img src="img/guanzhu.png"/>
+					<font class="mysc">我的关注</font>
+				</div>
+			</div>
+			<div class="two">
+				<div class="car">
+					<img src="img/car.png"/>
+					<font class="mycar">购物车</font>
+				</div>
+				<div class="local">
+					<img src="img/local.png"/>
+					<font class="mylocal">收货地址</font>
+				</div>
+			</div>
+			<div class="three">
+				<div class="money">
+					<img src="img/money.png"/>
+					<font class="mym">优惠券</font>
+				</div>
+				<div class="local">
+					<img src="img/ear.png"/>
+					<font class="mylocal">在线客服</font>
+				</div>
+			</div>
+			<div class="three">
+				<div class="money">
+					<img src="img/mail.png"/>
+					<font class="myxx">我的消息</font>
+				</div>
+				<div class="wheel">
+					<img src="img/wheel.png"/>
+					<font class="mywheel">设置</font>
+				</div>
+			</div>
+		</div>
+		<div class="di">
+			<div class="shouye">
+				<img src="img/home.png"/>
+				<font class="myshou">首页</font>
+			</div>
+			<div class="shangcheng">
+				<img src="img/bao.png"/>
+				<font class="myshou">商城</font>
+			</div>
+			<div class="jia">
+				<img src="img/jia.png">
+			</div>
+			<div class="linggan">
+				<img src="img/ball.png"/>
+				<font class="myshou">灵感</font>
+			</div>
+			<div class="wode">
+				<img src="img/people.png"/>
+				<font class="mymy">我的</font>
+			</div>
+		</div>
+	</body>
+</html>

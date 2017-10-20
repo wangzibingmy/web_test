@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    	<script src="js/jquery-2.2.2.js"></script>
+    	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+    	<style>
+    		.mypage{
+    			background: transparent url(images/bg.jpg);
+    		}
+    		#zhuce{
+    			margin-top: 4rem;
+    		}
+    		#se{
+    			color: orangered;
+    		}
+    	</style>
+	</head>
+	<body>
+		<div data-role="page" id="pagethree" class="mypage">
+			<div data-role="content" id="zhuce">
+					<form methed="post action="demoform.asp name="a" >					
+						<input type="text" name="sname" placeholder="用户名" id="sname" onblur="test()"/>
+						<span id="pp"></span>
+						<input type="text" name="tname" placeholder="输入密码" id="tname" />
+						<input type="text" name="zname" placeholder="确认密码" id="zname" onblur="checkk()" />
+						<span id="mm"></span>
+						<input type="submit" name="sub" value="注册" id="sub" />						
+					</form>	
+					<h3 id="se"></h3>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">	
+		var sub=document.getElementById('sub');
+    	var tname = document.getElementById("tname");
+    	var sname = document.getElementById("sname");
+    	var zname = document.getElementById("zname");
+    	var se = document.getElementById("se");
+    	function test() 
+		{ 
+			if(sname.value.length >= 5) 
+			{ 
+				document.getElementById("pp").innerHTML="用户名格式少于4位";
+			}
+			else{			
+
+				document.getElementById("pp").innerHTML="";
+    		}			
+		} 
+		function checkk(){ 
+			if(tname.value!=zname.value) 
+			{ 
+				document.getElementById("mm").innerHTML="密码不一致";
+			
+			}	
+			else{
+          		document.getElementById("mm").innerHTML="";
+			}
+		}
+
+
+		$('#sub').click(function(){
+			$.ajax({
+    			//type:请求方式（get，post）
+    			type:'get',
+    			//url:接口地址
+    			url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+    			//data:传入参数
+    			data:{status:'register',userID:sname.value,password:tname.value},
+    			//success:成功后的回调函数
+    			dataType:'json',
+				success:function(data){
+					console.log(data);
+					if(sname.value==""||tname.value==""||zname.value==""||mm.innerHTML!=""){
+						alert('输入错误');
+					}					
+					else{
+						switch(data){
+							case 0:
+						   		se.innerHTML = "用户名已存在";
+						   		break;
+							case 1:
+						   		se.innerHTML ="注册成功！";
+						   		window.location="test_2denglu.html";
+						   		break;
+							case 2:
+						   		se.innerHTML ="数据库报错";
+						   		break;
+							default:
+						    	alert('error!');
+						    	break;
+						}
+					}
+				}
+    		})
+		})	
+	</script>
+</html>

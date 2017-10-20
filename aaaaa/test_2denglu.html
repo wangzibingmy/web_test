@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    	<script src="js/jquery-2.2.2.js"></script>
+    	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+    	<style>
+    		.mypage{
+    			background: transparent url(images/bg.jpg) 0 0 no-repeat;
+    		}
+    		.toux{
+    			width: 12rem;
+    			border-radius: 50%;
+			}
+			#tou{
+    		   text-align: center;
+    		}
+    		#se{
+    			color: orangered;
+    		}
+    	</style>
+    	
+	</head>
+	<body>
+		<div data-role="page" id="pagetwo" class="mypage">
+			<div data-role="content">
+					<div id="tou">
+						<img src="images/qq1.png" class="toux" />
+					</div>
+					<form methed="post action="demoform.asp>
+						<input type="text" name="fname" placeholder="账号" id="fname"/>
+						<input type="text" name="tname" placeholder="密码" id="tname"/>
+						<input type="submit" name="sub" value="登录" id="submit"/>
+					</form>	
+					<h3 id="se"></h3>
+			</div>
+		</div>
+	</body>
+    		
+	<script type="text/javascript">
+    	var dengl=document.getElementById('submit');
+    	
+    	$('#submit').click(function(){
+			$.ajax({
+    			//type:请求方式（get，post）
+    			type:'get',
+    			dataType:'json',
+    			//url:接口地址
+    			url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+    			data:{status:'login',userID:fname.value,password:tname.value},
+    			//success:成功后的回调函数
+    			success:function(data){
+    				console.log(data);   
+    				switch(data){
+							case 0:
+						   		se.innerHTML = "用户名不存在";
+						   		break;
+							case 2:
+						   		se.innerHTML ="用户名密码不符";
+						   		break;
+							default:														    	
+						    		se.innerHTML ="登录成功！";
+									window.location="test_2li.html";								
+						    	break;
+					}
+    			}
+    		})
+		})
+</script>
+</html>
